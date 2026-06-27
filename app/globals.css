@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-from: #f3faf3;
+  --bg-to: #e8f3e4;
+}
+
+body {
+  /* Background artwork on every page — mobile art by default, desktop from 768px */
+  background-color: #ffffff;
+  background-image: url("/assets/backgrounds/bg-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url("/assets/backgrounds/bg-home-desktop.jpg");
+  }
+}
+
+/* Home screen background — mobile art by default, desktop art from 768px up */
+.bg-home {
+  background-image: url("/assets/backgrounds/bg-home-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+}
+@media (min-width: 768px) {
+  .bg-home {
+    background-image: url("/assets/backgrounds/bg-home-desktop.jpg");
+  }
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop { animation: pop-in 0.25s ease-out both; }
+
+/* How-to-play demo: orange card (a) and indigo card (b) swap places, pointer follows */
+@keyframes demo-a {
+  0%, 12% { transform: translateX(0) scale(1) rotate(0deg); }
+  18% { transform: translateX(0) scale(1.12) rotate(4deg); }
+  42%, 62% { transform: translateX(-116px) scale(1.12) rotate(-3deg); }
+  70%, 86% { transform: translateX(-116px) scale(1) rotate(0deg); }
+  100% { transform: translateX(0) scale(1) rotate(0deg); }
+}
+@keyframes demo-b {
+  0%, 16% { transform: translateX(0); }
+  42%, 86% { transform: translateX(116px); }
+  100% { transform: translateX(0); }
+}
+@keyframes demo-p {
+  0% { opacity: 0; transform: translateX(-50%) translateY(14px) scale(1); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0) scale(0.9); }
+  62% { opacity: 1; transform: translateX(-50%) translateY(0) scale(0.9); }
+  72%, 100% { opacity: 0; transform: translateX(-50%) translateY(0) scale(1); }
+}
+@keyframes demo-glow {
+  0%, 12% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+  18%, 62% { box-shadow: 0 0 0 5px rgba(249, 115, 22, 0.45), 0 16px 32px rgba(0, 0, 0, 0.28); }
+  72%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+}
+.demo-card-a { animation: demo-a 3.8s ease-in-out infinite, demo-glow 3.8s ease-in-out infinite; }
+.demo-card-b { animation: demo-b 3.8s ease-in-out infinite; }
+.demo-pointer { animation: demo-p 3.8s ease-in-out infinite; }
+
+@keyframes float-up {
+  0% { transform: translateY(8px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-float { animation: float-up 0.3s ease-out both; }
