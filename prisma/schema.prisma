@@ -10,10 +10,11 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  name      String
-  phone     String   @unique
-  createdAt DateTime @default(now())
+  id         String   @id @default(cuid())
+  name       String
+  employeeId String   @unique
+  phone      String   @unique
+  createdAt  DateTime @default(now())
 
   sessions GameSession[]
 }

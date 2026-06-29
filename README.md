@@ -1,8 +1,8 @@
 # Bridgestone India ESG Quiz
 
 Timed multiple-choice quiz app built from the provided Excel question bank.
-Players log in with name + phone, answer 10 randomly selected MCQs from a
-50-question bank, and are ranked on the leaderboard by highest score first and
+Players log in with name, employee ID, and mobile number, answer 3 randomly
+selected MCQs from a 53-question bank, and are ranked on the leaderboard by highest score first and
 lowest completion time second.
 
 ## Tech
@@ -45,8 +45,8 @@ Open `http://localhost:3000`.
 
 ## Scoring
 
-Each quiz attempt has 10 questions. Each correct answer gives 10 points, so the
-final result is out of 100. Final leaderboard ranking is:
+Each quiz attempt has 3 questions. Each correct answer gives 10 points, so the
+final result is out of 30. Final leaderboard ranking is:
 
 1. Higher total score
 2. Lower total quiz time

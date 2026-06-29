@@ -57,7 +57,7 @@ export default function HowToPlay({ onStart }: { onStart?: () => void }) {
             <li className="flex items-start gap-3">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-leaf-600 text-xs font-black text-white">1</span>
               <span>
-                Log in with your name and phone number, then choose <b>Play</b>.
+                Log in with your name, employee ID, and mobile number, then choose <b>Play</b>.
               </span>
             </li>
             <li className="flex items-start gap-3">

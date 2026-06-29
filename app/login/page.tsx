@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 export default function LoginPage() {
   const router = useRouter();
   const [name, setName] = useState("");
+  const [employeeId, setEmployeeId] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
@@ -17,7 +18,7 @@ export default function LoginPage() {
     const res = await fetch("/api/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, phone }),
+      body: JSON.stringify({ name, employeeId, phone }),
     });
     if (res.ok) {
       router.push("/");
@@ -61,7 +62,18 @@ export default function LoginPage() {
               />
             </label>
             <label className="flex flex-col gap-1">
-              <span className="text-sm font-semibold text-leaf-800">Phone number</span>
+              <span className="text-sm font-semibold text-leaf-800">Employee ID</span>
+              <input
+                value={employeeId}
+                onChange={(e) => setEmployeeId(e.target.value)}
+                required
+                maxLength={60}
+                placeholder="e.g. BS12345"
+                className="rounded-xl border border-leaf-200 bg-white px-4 py-3 outline-none ring-leaf-400 focus:ring-2"
+              />
+            </label>
+            <label className="flex flex-col gap-1">
+              <span className="text-sm font-semibold text-leaf-800">Mobile number</span>
               <input
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}

@@ -13,7 +13,7 @@ export type QuizQuestion = {
 };
 
 export const POINTS_PER_QUESTION = 10;
-export const QUESTIONS_PER_ATTEMPT = 10;
+export const QUESTIONS_PER_ATTEMPT = 3;
 
 export const QUIZ_QUESTIONS: QuizQuestion[] = [
   {
@@ -665,6 +665,45 @@ export const QUIZ_QUESTIONS: QuizQuestion[] = [
       { id: "D", text: "Ask workers to sign a waiver" },
     ],
     correctOptionId: "B",
+  },
+  {
+    id: "q51",
+    number: 51,
+    level: "L1",
+    question: "What is Bridgestone Target for Zero Carbon emission for Scope-1 and Scope-2",
+    options: [
+      { id: "A", text: "2027" },
+      { id: "B", text: "2028" },
+      { id: "C", text: "2029" },
+      { id: "D", text: "2030" },
+    ],
+    correctOptionId: "D",
+  },
+  {
+    id: "q52",
+    number: 52,
+    level: "L1",
+    question: "What is Bridgestone Target for Zero Carbon emission for Scope-3",
+    options: [
+      { id: "A", text: "2040" },
+      { id: "B", text: "2045" },
+      { id: "C", text: "2050" },
+      { id: "D", text: "2060" },
+    ],
+    correctOptionId: "C",
+  },
+  {
+    id: "q53",
+    number: 53,
+    level: "L2",
+    question: "What is Minimum Requirement of Green Coverage area in Industry of the available open land",
+    options: [
+      { id: "A", text: "37%" },
+      { id: "B", text: "45%" },
+      { id: "C", text: "51%" },
+      { id: "D", text: "33%" },
+    ],
+    correctOptionId: "D",
   },
 ];
 

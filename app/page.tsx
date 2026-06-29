@@ -33,7 +33,7 @@ export default async function HomePage() {
           </p>
           <p className="mt-2 text-center text-sm text-leaf-700/80">
             Give the answers for {QUESTIONS_PER_ATTEMPT} MCQ questions. Total
-            score is out of 100; faster completion breaks ties.
+            score is out of 30; faster completion breaks ties.
           </p>
 
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
